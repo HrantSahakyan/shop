@@ -2831,7 +2831,7 @@ fieldset:disabled a.btn {
   border-color: #f8f9fa;
 }
 .btn-outline-light:hover {
-  color: #212529;
+  color: #212529 !important;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -3960,6 +3960,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  background: #005cad;
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -10006,4 +10007,19 @@ h3 {
     padding: 5px;
     width: 100%;
 }
-
+footer{
+    background: #005cad;
+}
+footer > *{
+    color: white;
+}
+.fa-soc {
+    border: 1px solid white;
+    padding: 10px;
+}
+.soc:hover{
+    text-decoration: none;
+}
+.fa-soc:hover{
+    background: #027ae5;
+}
