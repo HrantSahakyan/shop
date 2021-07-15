@@ -37,6 +37,9 @@ Auth::routes();
 //Route::get('/', [App\Http\Controllers\HomeComponent::class]);
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/terms', [\App\Http\Controllers\PageController::class, 'terms'])->name('terms');
+Route::get('/privacy', [\App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
+Route::get('/return-policy', [\App\Http\Controllers\PageController::class, 'return_policy'])->name('return-policy');
 
 
 //Company

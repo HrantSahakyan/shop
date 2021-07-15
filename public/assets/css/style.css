@@ -7176,3 +7176,6 @@ background-color: #888888;
 #navbarDropdown{
     color: black !important;
 }
+#user_type {
+    border: 1px solid black !important;
+}

@@ -89,7 +89,7 @@
                                     <div class="wrap-vertical-nav">
                                         <ul>
                                             <li class="menu-item"><a href="/profile" class="link-term">My Account</a></li>
-                                            <li class="menu-item"><a href="#" class="link-term">Brands</a></li>
+                                            <li class="menu-item"><a href="/store" class="link-term">Brands</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Gift Certificates</a>
                                             </li>
                                             <li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
@@ -104,8 +104,8 @@
                                     <div class="wrap-vertical-nav">
                                         <ul>
                                             <li class="menu-item"><a href="/contact" class="link-term">Contact Us</a></li>
-                                            <li class="menu-item"><a href="/store" class="link-term">Returns</a></li>
-                                            <li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
+                                            <li class="menu-item"><a href="/return-policy" class="link-term">Returns</a></li>
+                                            <li class="menu-item"><a href="/contact" class="link-term">Site Map</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Specials</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Order History</a></li>
                                         </ul>
@@ -136,17 +136,17 @@
                             <div class="item-content">
                                 <div class="wrap-list-item social-network">
                                     <ul>
-                                        <li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter"
+                                        <li><a href="https://www.twitter.com/" class="link-to-item" title="twitter"><i class="fa fa-twitter"
                                                                                                 aria-hidden="true"></i></a>
                                         </li>
-                                        <li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook"
+                                        <li><a href="https://www.facebook.com/" class="link-to-item" title="facebook"><i class="fa fa-facebook"
                                                                                                  aria-hidden="true"></i></a>
                                         </li>
-                                        <li><a href="#" class="link-to-item" title="pinterest"><i
+                                        <li><a href="https://www.pinterest.com/" class="link-to-item" title="pinterest"><i
                                                     class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-                                        <li><a href="#" class="link-to-item" title="instagram"><i
+                                        <li><a href="https://www.instagram.com/" class="link-to-item" title="instagram"><i
                                                     class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                        <li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo"
+                                        <li><a href="https://www.vimeo.com/" class="link-to-item" title="vimeo"><i class="fa fa-vimeo"
                                                                                               aria-hidden="true"></i></a>
                                         </li>
                                     </ul>
@@ -161,11 +161,11 @@
                             <div class="item-content">
                                 <div class="wrap-list-item apps-list">
                                     <ul>
-                                        <li><a href="#" class="link-to-item" title="our application on apple store">
+                                        <li><a href="https://www.apple.com/ru/app-store/" class="link-to-item" title="our application on apple store">
                                                 <figure><img src="{{asset('assets/images/brands/apple-store.png')}}"
                                                              alt="apple store" width="128" height="36"></figure>
                                             </a></li>
-                                        <li><a href="#" class="link-to-item"
+                                        <li><a href="https://play.google.com/store/apps" class="link-to-item"
                                                title="our application on google play store">
                                                 <figure><img
                                                         src="{{asset('assets/images/brands/google-play-store.png')}}"
@@ -189,11 +189,11 @@
                         <div class="wrap-nav horizontal-nav">
                             <ul>
                                 <li class="menu-item"><a href="/about" class="link-term">About us</a></li>
-                                <li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a>
+                                <li class="menu-item"><a href="/privacy" class="link-term">Privacy Policy</a>
                                 </li>
-                                <li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms &
+                                <li class="menu-item"><a href="/terms" class="link-term">Terms &
                                         Conditions</a></li>
-                                <li class="menu-item"><a href="return-policy.html" class="link-term">Return Policy</a>
+                                <li class="menu-item"><a href="/return-policy" class="link-term">Return Policy</a>
                                 </li>
                             </ul>
                         </div>
