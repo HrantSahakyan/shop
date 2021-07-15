@@ -22,9 +22,6 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/store', function () {
-    return view('store');
-});
 Route::get('/cart', function () {
     return view('cart');
 });
@@ -40,6 +37,8 @@ Auth::routes();
 Route::get('/terms', [\App\Http\Controllers\PageController::class, 'terms'])->name('terms');
 Route::get('/privacy', [\App\Http\Controllers\PageController::class, 'privacy'])->name('privacy');
 Route::get('/return-policy', [\App\Http\Controllers\PageController::class, 'return_policy'])->name('return-policy');
+Route::get('/store', [\App\Http\Controllers\ProductController::class, 'products'])->name('store');
+Route::get('/product/{slug}', [\App\Http\Controllers\ProductController::class, 'product'])->name('product');
 
 
 //Company
