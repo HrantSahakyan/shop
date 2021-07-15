@@ -90,17 +90,24 @@
 
                                 @if (Route::has('register'))
                                     <li class="menu-item">
-                                        <a title="Register or Login" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a title="Register or Login"
+                                           href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 @endif
-                                    @else
+                                @else
+                                    @if(Auth::user()->user_type === 'customer')
                                         <div class="dropdown user-dropdown">
-                                            <a id="navbarDropdown" class="nav-link dropdown dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                                {{ Auth::user()->name }}
+                                            <a id="navbarDropdown" class="nav-link dropdown dropdown-toggle text-white"
+                                               href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name . ' (' . Auth::user()->user_type . ')'}}
                                             </a>
 
                                             <div class="dropdown-menu dropdown-menu-right"
                                                  aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="/profile">
+                                                    {{ __('My page') }}
+                                                </a>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                                    onclick="event.preventDefault();
                                                                                      document.getElementById('logout-form').submit();">
@@ -113,6 +120,35 @@
                                                 </form>
                                             </div>
                                         </div>
+                                    @endif
+                                    @if(Auth::user()->user_type === 'company')
+                                        <div class="dropdown user-dropdown">
+                                            <a id="navbarDropdown" class="nav-link dropdown dropdown-toggle text-white"
+                                               href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false" v-pre>
+                                                {{ Auth::user()->name . ' (' . Auth::user()->user_type . ')'}}
+                                            </a>
+
+                                            <div class="dropdown-menu dropdown-menu-right"
+                                                 aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="/profile">
+                                                    {{ __('Shop page') }}
+                                                </a>
+                                                <a class="dropdown-item" href="/dashboard">
+                                                    {{ __('Dashboard') }}
+                                                </a>
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                   onclick="event.preventDefault();
+                                                                                     document.getElementById('logout-form').submit();">
+                                                    {{ __('Logout') }}
+                                                </a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                      class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </div>
+                                        </div>
+                                    @endif
                             </ul>
                         @endguest
                     </div>
@@ -187,23 +223,26 @@
                         <ul class="nav primary clone-main-menu" id="mercado_main" data-menuname="Main menu">
                             <li class="menu-item home-icon">
                                 <a href="/" class="link-term mercado-item-title"><i class="fa fa-home"
-                                                                                             aria-hidden="true"></i></a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="/about" class="link-term mercado-item-title">About Us</a>
+                                                                                    aria-hidden="true"></i></a>
                             </li>
                             <li class="menu-item">
                                 <a href="/store" class="link-term mercado-item-title">Store</a>
                             </li>
                             <li class="menu-item">
-                                <a href="/cart" class="link-term mercado-item-title">Cart</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="/checkout" class="link-term mercado-item-title">Checkout</a>
+                                <a href="/about" class="link-term mercado-item-title">About Us</a>
                             </li>
                             <li class="menu-item">
                                 <a href="/contact" class="link-term mercado-item-title">Contact Us</a>
                             </li>
+                            @if(Auth::check() === false or Auth::user()->user_type === 'customer')
+
+                                <li class="menu-item">
+                                    <a href="/cart" class="link-term mercado-item-title">Cart</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/checkout" class="link-term mercado-item-title">Checkout</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </div>

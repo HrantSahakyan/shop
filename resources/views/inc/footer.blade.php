@@ -75,7 +75,7 @@
                             <div class="item-content">
                                 <div class="wrap-hotline-footer">
                                     <span class="desc">Call Us toll Free</span>
-                                    <b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+                                    <b class="phone-number">(+374) 77 77-77-77</b>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                 <div class="item-content">
                                     <div class="wrap-vertical-nav">
                                         <ul>
-                                            <li class="menu-item"><a href="#" class="link-term">My Account</a></li>
+                                            <li class="menu-item"><a href="/profile" class="link-term">My Account</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Brands</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Gift Certificates</a>
                                             </li>
@@ -103,8 +103,8 @@
                                 <div class="item-content">
                                     <div class="wrap-vertical-nav">
                                         <ul>
-                                            <li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
-                                            <li class="menu-item"><a href="#" class="link-term">Returns</a></li>
+                                            <li class="menu-item"><a href="/contact" class="link-term">Contact Us</a></li>
+                                            <li class="menu-item"><a href="/store" class="link-term">Returns</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Specials</a></li>
                                             <li class="menu-item"><a href="#" class="link-term">Order History</a></li>
@@ -188,7 +188,7 @@
                     <div class="coppy-right-item item-right">
                         <div class="wrap-nav horizontal-nav">
                             <ul>
-                                <li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>
+                                <li class="menu-item"><a href="/about" class="link-term">About us</a></li>
                                 <li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a>
                                 </li>
                                 <li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms &

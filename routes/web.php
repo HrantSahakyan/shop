@@ -34,5 +34,17 @@ Route::get('/checkout', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::get('/', [App\Http\Controllers\HomeComponent::class]);
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+//Company
+Route::middleware(['authcompany'])->group(function (){
+    Route::get('/profile', [\App\Http\Controllers\CompanyController::class, 'index'])->name('profile');
+    Route::get('/dashboard', [\App\Http\Controllers\CompanyController::class, 'dashboard'])->name('dashboard');
+});
+//Customer
+Route::middleware(['auth'])->group(function (){
+    Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('profile');
+});
